@@ -15,7 +15,23 @@
 		D07EB9282766E324009D29F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07EB9272766E324009D29F5 /* Assets.xcassets */; };
 		D07EB92B2766E324009D29F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EB9292766E324009D29F5 /* LaunchScreen.storyboard */; };
 		D07EB92E2766E324009D29F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EB92D2766E324009D29F5 /* main.m */; };
+		D07EB94027671970009D29F5 /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07EB93F2767196F009D29F5 /* App.xcframework */; };
+		D07EB94127671970009D29F5 /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D07EB93F2767196F009D29F5 /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D07EB94227671970009D29F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D07EB94127671970009D29F5 /* App.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		894C4CA13C49CC9B122756AE /* Pods-NativeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeDemo.debug.xcconfig"; path = "Target Support Files/Pods-NativeDemo/Pods-NativeDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +49,7 @@
 		D07EB92A2766E324009D29F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D07EB92C2766E324009D29F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D07EB92D2766E324009D29F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D07EB93F2767196F009D29F5 /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = App.xcframework; path = Flutter/Debug/App.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDC49343B2665544CDF9288 /* Pods_NativeDemo.framework in Frameworks */,
+				D07EB94027671970009D29F5 /* App.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +71,6 @@
 				894C4CA13C49CC9B122756AE /* Pods-NativeDemo.debug.xcconfig */,
 				985EB34980B2E4E170FC1314 /* Pods-NativeDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +113,7 @@
 		E9041D1606AB0EA859B5F139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D07EB93F2767196F009D29F5 /* App.xcframework */,
 				BAC9509593860AC88576E4E2 /* Pods_NativeDemo.framework */,
 			);
 			name = Frameworks;
@@ -112,6 +130,8 @@
 				D07EB9142766E320009D29F5 /* Sources */,
 				D07EB9152766E320009D29F5 /* Frameworks */,
 				D07EB9162766E320009D29F5 /* Resources */,
+				D76F2306D24536DB83F4B87F /* [CP] Embed Pods Frameworks */,
+				D07EB94227671970009D29F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +208,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76F2306D24536DB83F4B87F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeDemo/Pods-NativeDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeDemo/Pods-NativeDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeDemo/Pods-NativeDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
